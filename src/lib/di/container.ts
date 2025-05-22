@@ -9,7 +9,7 @@ export const DI_TOKENS = {
 
 // Clase simple para el contenedor de DI
 class DIContainer {
-  private services: Map<string, any> = new Map()
+  private services: Map<string, unknown> = new Map()
 
   register<T>(token: string, implementation: T): void {
     this.services.set(token, implementation)
@@ -20,7 +20,7 @@ class DIContainer {
     if (!service) {
       throw new Error(`Service not registered for token: ${token}`)
     }
-    return service
+    return service as T
   }
 }
 

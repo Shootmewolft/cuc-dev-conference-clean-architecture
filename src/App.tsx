@@ -1,5 +1,5 @@
-import ProductList from "@/ui/components/ProductList"
-import ShoppingCart from "@/ui/components/ShoppingCart"
+import ProductList from "@/ui/components/products/ProductList"
+import ShoppingCart from "@/ui/components/cart/ShoppingCart"
 import { CartProvider } from "@/ui/context/CartContext"
 
 export default function App() {

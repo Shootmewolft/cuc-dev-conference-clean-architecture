@@ -35,12 +35,13 @@ export class MockProductRepository implements ProductRepository {
 
   async getProducts(): Promise<Product[]> {
     // Simulamos una llamada a API con un pequeño retraso
-    await new Promise((resolve) => setTimeout(resolve, 300))
+    await new Promise((resolve) => setTimeout(resolve, 500))
     return [...this.products]
   }
 
   async getProductById(id: string): Promise<Product | null> {
-    await new Promise((resolve) => setTimeout(resolve, 200))
+    // Simulamos una llamada a API con un pequeño retraso
+    await new Promise((resolve) => setTimeout(resolve, 500))
     const product = this.products.find((p) => p.id === id)
     return product || null
   }
